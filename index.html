@@ -4,257 +4,354 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090910">
-  <meta name="description" content="JIBON - A modern education management platform.">
-  <title>JIBON | Smart Education Platform</title>
+  <meta name="theme-color" content="#080611">
+  <title>JIBON'S WORLD</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Allura&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <a href="#home" class="logo">JIBON<span>.(</span></a>
+<canvas id="starCanvas"></canvas>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
 
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="Open navigation" aria-expanded="false">
-      ☰
+<!-- WELCOME SCREEN -->
+<div id="welcome" class="welcome">
+  <div class="welcome-orb"></div>
+  <div class="welcome-content">
+    <div class="welcome-logo">
+  <span>yoo</span>
+  <span>it's</span>
+  <span>jibon</span>
+</div>
+    <p>𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓸𝓾 𝓾𝓷𝓲𝓿𝓮𝓻𝓼𝓮</p>
+    <button class="enter-btn" id="enterBtn">
+      ENTER MY UNIVERSE <span>↗</span>
     </button>
+  </div>
+  <div class="welcome-bottom">✧ Develop By Jibon✧ </div>
+</div>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="#notices">Notices</a>
-      <a href="#contact">Contact</a>
-      <a href="#login" class="nav-login">Login</a>
-    </nav>
+<!-- MAIN WEBSITE -->
+<div id="mainApp" class="main-app hidden">
+
+  <header class="topbar glass">
+    <button class="menu-btn" id="menuToggle">.☘︎ ݁˖</button>
+    <div class="brand" id="brandLogo"> JIBON</div>
+    <button class="admin-trigger" id="adminTrigger">✦</button>
   </header>
 
-  <!-- Hero -->
+  <nav class="navbar glass" id="navbar">
+    <button data-page="home" class="nav-link active">Home</button>
+    <button data-page="photos" class="nav-link">Photos</button>
+    <button data-page="hobbies" class="nav-link">Hobbies</button>
+    <button data-page="memories" class="nav-link">Memories</button>
+    <button data-page="about" class="nav-link">About</button>
+  </nav>
+
+  <!-- Home -->
   <main>
-    <a href="https://www.instagram.com/__mr_dark_night_/"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="instagram-hero">
-      Ig:
+    <section class="page active" id="page-home">
+      <div class="hero glass">
+        <span class="eyebrow">✦ WELCOME TO MY UNIVERSE ✦</span>
+        <h1>Explore My <span>World</span></h1>
+        <p>A little space filled with my photos, hobbies and memories.</p>
+        <button class="primary-btn" data-open="photos">EXPLORE GALLERY ↗</button>
+        <div class="hero-orb orb-one"></div>
+        <div class="hero-orb orb-two"></div>
+      </div>
+
+      <div class="section-heading">
+        <span>DISCOVER</span>
+        <h2>My World</h2>
+      </div>
+
+      <div class="feature-grid">
+        <button class="feature-card glass" data-open="photos">
+         <span class="motion-emoji">✌︎㋡</span>
+          <h3>My Photos</h3>
+          <p>Personal photo gallery</p>
+          <span class="card-arrow">↗</span>
+        </button>
        
-       ᴍʀ_ᴅᴀʀᴋ_ɴɪɢʜᴛ
-       
-</a>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <div class="hero-tag">
-          <span class="live-dot"></span>
-          SMART EDUCATION MANAGEMENT
-        </div>
-
-        <h1>
-          Learn Today.<br>
-          <span>Lead Tomorrow.</span>
-        </h1>
-
-        <p>
-          Welcome to JIBON, a modern digital education platform
-          designed to make learning and school management easier.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#login" class="btn btn-primary">Get Started →</a>
-          <a href="#about" class="btn btn-outline">Discover More</a>
-        </div>
-
-        <div class="hero-trust">
-          <span>✦ Smart Learning</span>
-          <span>✦ Easy Management</span>
-          <span>✦ Digital Campus</span>
-        </div>
+       <button class="feature-card glass" data-open="hobbies">
+         <span class="motion-emoji">⚔⊹ ࣪ ˖</span>
+          <h3>My Hobbies</h3>
+          <p>Things I love doing</p>
+          <span class="card-arrow">↗</span>
+        </button>
+        <button class="feature-card glass" data-open="memories">
+          <span class="motion-emoji">｡𖦹°‧</span>
+          <h3>Memories</h3>
+          <p>Special moments</p>
+          <span class="card-arrow">↗</span>
+        </button>
+        <button class="feature-card glass" data-open="about">
+          <span class="motion-emoji">˙𐃷˙</span>
+          <h3>About Me</h3>
+          <p>Get to know me</p>
+          <span class="card-arrow">↗</span>
+        </button>
       </div>
 
-      <div class="hero-visual">
-        <div class="glow"></div>
-        <div class="dashboard-preview">
-          <div class="preview-top">
-            <div>
-              <span class="preview-label">JIBON PORTAL</span>
-              <h3>Welcome Back!</h3>
-            </div>
-            <div class="avatar">J</div>
-          </div>
+<!-- SECRET SURPRISE -->
 
-          <div class="preview-stat">
-            <div class="stat-icon">📚</div>
-            <div>
-              <small>Learning Platform</small>
-              <h3>Explore Knowledge</h3>
-            </div>
-          </div>
+<div class="secret-box">
 
-          <div class="preview-stat">
-            <div class="stat-icon">🎓</div>
-            <div>
-              <small>Education</small>
-              <h3>Build Your Future</h3>
-            </div>
-          </div>
+  <button class="secret-btn" id="secretBtn">
+     More Information
+  </button>
 
-          <div class="progress-area">
-            <div class="progress-heading">
-              <span>Learning Journey</span>
-              <span>Start Here</span>
-            </div>
-            <div class="progress-bar">
-              <div></div>
-            </div>
-          </div>
+  <div class="secret-message" id="secretMessage">
+    <h2>✦ My Universe ✦</h2>
 
-          <div class="preview-bottom">
-            <span>✦ Learn</span>
-            <span>✦ Grow</span>
-            <span>✦ Succeed</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <p>
+      Every picture has a story,
+      every memory has a feeling.
+    </p>
 
-    <!-- About -->
-    <section class="section about" id="about">
-      <div class="section-heading">
-        <span class="eyebrow">ABOUT JIBON</span>
-        <h2>Education Made <span>Smarter.</span></h2>
-        <p>
-          One platform to connect students, teachers and
-          administrators in a better learning environment.
-        </p>
-      </div>
+    <h3> Website Made By Jibon </h3>
 
-      <div class="about-card">
-        <div class="about-icon">🌟</div>
-        <h3>Our Mission</h3>
-        <p>
-          Our mission is to make education more organized,
-          accessible and efficient through technology.
-          JIBON brings important educational services together
-          in one convenient platform.
-        </p>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section class="section features" id="features">
-      <div class="section-heading">
-        <span class="eyebrow">OUR FEATURES</span>
-        <h2>Everything You <span>Need.</span></h2>
-        <p>Useful tools for a connected education experience.</p>
-      </div>
-
-      <div class="feature-''grid">
-        <article class="feature-card">
-          <div class="feature-icon">🎓</div>
-          <h3>Student Dashboard</h3>
-          <p>Access student information and learning resources.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">⚙️</div>
-          <h3>Admin Dashboard</h3>
-          <p>Manage school information and platform activities.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">📖</div>
-          <h3>Course Management</h3>
-          <p>Explore courses and organize learning materials.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">📢</div>
-          <h3>Notice Board</h3>
-          <p>Keep important announcements in one place.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">🔍</div>
-          <h3>Smart Search</h3>
-          <p>Find educational information more easily.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">👤</div>
-          <h3>Student Profile</h3>
-          <p>View and manage your personal account details.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Statistics -->
-    <section class="stats-section">
-      <div class="stat-box">
-        <h2>01</h2>
-        <p>Learning Platform</p>
-      </div>
-      <div class="stat-box">
-        <h2>24/7</h2>
-        <p>Digital Access</p>
-      </div>
-      <div class="stat-box">
-        <h2>100%</h2>
-        <p>Learning Focus</p>
-      </div>
-    </section>
-
-    <!-- Notices -->
-    <section class="section notices" id="notices">
-      <div class="section-heading">
-        <span class="eyebrow">LATEST UPDATES</span>
-        <h2>Notice <span>Board.</span></h2>
-        <p>Stay informed about platform updates.</p>
-      </div>
-
-      <div class="notice-list">
-        <article class="notice-card">
-          <span class="notice-date">WELCOME</span>
-          <h3>Welcome to JIBON</h3>
-          <p>Our new education platform is ready to explore.</p>
-        </article>
-
-        <article class="notice-card">
-          <span class="notice-date">COMING SOON</span>
-          <h3>Student Dashboard</h3>
-          <p>Student account and learning features are coming.</p>
-        </article>
-
-        <article class="notice-card">
-          <span class="notice-date">COMING SOON</span>
-          <h3>Admin Management</h3>
-          <p>School management tools will be added soon.</p>
-        </article>
-      </div>
-    </section>
-
-        <!-- JIBON Profile -->
-
-  </main>
-
-  <footer id="contact">
-    <a href="#home" class="logo">JIBON<span>.</span></a>
-    <p>Smart Education. Better Future.</p>
-    <p>© JIBON. All rights reserved.</p>
-  </footer>
-
-  <script src="app.js"></script>
-</body>
-</h<div></div>tml>
-   <section class="section" id="profile">
-  <div class="section-heading">
-    <span class="eyebrow">ABOUT ME</span>
-    <h2>it's <span>Mr_dark_night.</span></h2>
-    <div class="profile-photo">
-  <img src="jibon.jpeg" alt="Jibon">
-</div>
-    <section class="section" id="discover">
-  <div class="section-heading">
-    <span class="eyebrow">DISCOVER ME</span>
-    <h2>Explore <span>JIBON.</span></h2>
-    <p>Discover my interests, skills and creativity.</p>
+    <p>Thanks for visiting my little universe! ♡</p>
   </div>
-  
+
+</div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section class="page" id="page-photos">
+      <div class="section-heading">
+        <span>MY COLLECTION</span>
+        <h2>Photo Gallery</h2>
+        <p>Every picture tells a story ✨</p>
+      </div>
+      <div class="category-row" id="photoCategories">
+        <button class="category-btn active" data-category="all">All Photos</button>
+        <button class="category-btn" data-category="frame">nature</button>
+        <button class="category-btn" data-category="memory">Meow</button>
+        <button class="category-btn" data-category="favourite">Photo</button>
+      </div>
+      <div class="photo-grid" id="photoGrid">
+        <div class="empty-state glass">Your photos will appear here </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section class="page" id="page-hobbies">
+      <div class="section-heading">
+        <span>WHAT I LOVE</span>
+        <h2>My Hobbies</h2>
+      </div>
+      <div class="hobby-grid" id="hobbyGrid"></div>
+      <div class="hobby-detail glass hidden" id="hobbyDetail">
+        <button class="back-btn" id="hobbyBack">← Back</button>
+        <h2 id="hobbyDetailTitle"></h2>
+        <p id="hobbyDetailText"></p>
+        <div class="hobby-detail-images" id="hobbyDetailImages"></div>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section class="page" id="page-memories">
+      <div class="section-heading">
+        <span>MY SPECIAL MOMENTS</span>
+        <h2>Memories</h2>
+      </div>
+      <div class="memory-grid" id="memoryGrid">
+        <div class="empty-state glass">Your memories will appear here 🌌</div>
+      </div>
+     
+<!-- SECRET PORTAL INTERFACE -->
+<div id="magicPortalOverlay" class="magic-portal-overlay hidden">
+  <div class="portal-content">
+    <button id="magicPortalClose" class="portal-close">✕</button>
+
+    <div class="portal-circle">
+      <span>✧</span>
+    </div>
+
+    <h2>WELCOME TO THE UNKNOWN</h2>
+    <p>A secret corner of Jibon's World.</p>
+  </div>
+</div>
+<!-- DIMENSION SWITCH -->
+<div class="dimension-switch">
+  <p>✦ EXPLORE ANOTHER DIMENSION ✦</p>
+
+  <button id="dimensionBtn">
+    <span>◈</span> SWITCH DIMENSION
+  </button>
+</div>
+
+<!-- PORTAL WARP -->
+<div id="portalWarp" class="portal-warp">
+  <div class="warp-ring"></div>
+</div>
+
+    </section>
+
+<!-- ABOUT -->
+<section class="page" id="page-about">
+
+  <div class="section-heading">
+    <span>THE PERSON BEHIND THIS WORLD</span>
+    <h2>About Me</h2>
+  </div>
+
+  <div class="profile-scene">
+    <div class="profile-card glass" id="profile3D">
+
+      <div class="profile-glow"></div>
+
+      <div class="profile-avatar">
+        <img
+          src="111.jpg"
+          alt="Jibon Profile"
+          onerror="this.style.display='none'"
+        >
+        <span>J</span>
+      </div>
+
+      <div class="profile-tag">✦ PERSONAL PROFILE</div>
+
+      <h2 class="jibon-signature"> Jibon</h2>
+
+      <p class="profile-role">
+        Student • Photographer • Gaming Lover
+      </p>
+
+      <div class="profile-divider"></div>
+
+      <p class="profile-description">
+        Welcome to my personal universe.
+        Photography, gaming and creativity
+        are part of my world.
+      </p>
+
+      <div class="profile-interests">
+        <span>✌︎㋡ Photography</span>
+        <span> Gaming</span>
+        <span> Technology</span>
+      </div>
+
+      <a
+        href="https://www.instagram.com/__mr_dark_night_/"
+        target="_blank"
+        rel="noopener"
+        class="profile-social"
+      >
+        🅾 Instagram ↗
+      </a>
+
+      <div class="profile-bottom">
+        JIBON'S WORLD <span>✦</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+  <!-- PHOTO VIEWER -->
+  <div class="photo-viewer hidden" id="photoViewer">
+    <button class="viewer-close" id="viewerClose">✕</button>
+    <button class="viewer-arrow viewer-prev" id="viewerPrev">‹</button>
+    <div class="viewer-content">
+      <img id="viewerImage" src="" alt="Selected photo">
+      <h3 id="viewerTitle"></h3>
+      <p id="viewerCounter"></p>
+    </div>
+    <button class="viewer-arrow viewer-next" id="viewerNext">›</button>
+    <button class="slideshow-btn" id="slideshowBtn">▶ Slideshow</button>
+  </div>
+
+
+  <!-- ADMIN -->
+  <div class="admin-overlay hidden" id="adminOverlay">
+    <div class="admin-panel glass">
+      <button class="admin-close" id="adminClose">✕</button>
+      <div id="adminLogin">
+        <span class="eyebrow">PRIVATE SPACE</span>
+        <h2>Admin Studio</h2>
+        <input type="password" id="adminPassword" placeholder="Website Password">
+
+<input
+  type="email"
+  id="supabaseEmail"
+  placeholder="Enter Supabase Email"
+>
+
+<input type="password" id="supabasePassword"
+placeholder="Supabase Password">
+        <button class="primary-btn" id="adminLoginBtn">ENTER ADMIN</button>
+        <p id="adminError"></p>
+      </div>
+
+      <div id="adminDashboard" class="hidden">
+        <h2>Admin Studio ✦</h2>
+        <p>Manage your personal world</p>
+        <div class="admin-stats">
+          <div class="glass"><strong id="photoCount">0</strong><small>Photos</small></div>
+          <div class="glass"><strong id="hobbyCount">0</strong><small>Hobbies</small></div>
+        </div>
+
+        <h3>Add Photo</h3>
+        <input id="photoTitle" placeholder="Photo title">
+        <select id="photoCategory">
+          <option value="frame">Frame</option>
+          <option value="memory">Memory</option>
+          <option value="favourite">Favourite</option>
+        </select>
+        <input type="file" id="photoFile" accept="image/*">
+        <button class="primary-btn" id="addPhotoBtn">ADD PHOTO ＋</button>
+        <div id="adminPhotoList"></div>
+
+        <h3>Add Hobby</h3>
+        <input id="hobbyName" placeholder="Hobby name">
+        <input id="hobbyDescription" placeholder="Short description">
+        <button class="primary-btn" id="addHobbyBtn">ADD HOBBY ＋</button>
+        <div id="adminHobbyList"></div>
+                <!-- ADMIN MUSIC MANAGER -->
+        <h3>Music Manager 🎵</h3>
+
+        <input
+          type="text"
+          id="songTitle"
+          placeholder="Song name"
+        >
+
+        <input
+          type="text"
+          id="songArtist"
+          placeholder="Artist name"
+        >
+
+        <input
+          type="file"
+          id="songFile"
+          accept="audio/*"
+        >
+
+        <button class="primary-btn" id="addSongBtn">
+          ADD SONG ＋
+        </button>
+
+        <div id="adminSongList"></div>
+        <button class="logout-btn" id="adminLogout">LOG OUT</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>Develop By Jibon </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+<!-- AURORA UNIVERSE -->
+<div class="aurora-universe">
+  <div class="aurora aurora-one"></div>
+  <div class="aurora aurora-two"></div>
+  <div class="shooting-star"></div>
+</div>
+</body>
+</html>
